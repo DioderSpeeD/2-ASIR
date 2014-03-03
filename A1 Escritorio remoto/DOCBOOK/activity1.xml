@@ -1,0 +1,112 @@
+<chapter>
+	<title>A1: Acceso remoto</title>
+	<para>En esta práctica realizaremos los siguientes pasos:
+		<itemizedlist>
+                <listitem>1. Escritorio remoto con VNC</listitem>
+                <listitem>2. Escritorio remoto con RDP</listitem>
+				<listitem>3. Servidor de Terminales</listitem>
+        </itemizedlist>
+	</para>
+	<section>
+		<title>1 - Escritorio remoto con VNC</title>
+		<para>Acceder a Linux desde Windows</para>
+			<figure id="001">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/001.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+		<para>Acceder a Linux desde Linux</para>
+			<figure id="002">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/002.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+		<para>Acceder a Windows desde Linux</para>
+			<figure id="003">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/003.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+		<para>Acceder a Windows desde Windows</para>
+			<figure id="004">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/004.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+	</section>
+	<section>
+		<title>2 - Escritorio remoto con RDP</title>
+		<para>Acceder a Windows Server desde Windows</para>
+			<figure id="005">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/005.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+		<para>Acceder a Windows Server desde Linux</para>
+			<figure id="006">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/006.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+	</section>
+	<section>
+		<title>3 - Servidor de Terminales</title>
+		<para>Instalamos el rol Terminal Services en nuestro servidor</para>
+			<figure id="007">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/007.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+			<figure id="008">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/010.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+		<para>Probamos a acceder desde un cliente. Nada mas establecer conexion se deberia ejecutar la herramienta "Bloc de notas".</para>
+			<figure id="009">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/011.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+			<figure id="010">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/012.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+			<figure id="011">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/013.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+			<figure id="012">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/014.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+	</section>
+</chapter>
+
