@@ -1,0 +1,136 @@
+<chapter>
+	<title>A2: Clientes ligeros</title>
+	<para>En esta práctica realizaremos los siguientes pasos:
+		<itemizedlist>
+                <listitem>1. Preparar el Servidor LTSP</listitem>
+                <listitem>2. Probar el acceso desde un cliente</listitem>
+        </itemizedlist>
+	</para>
+	<section>
+		<title>1 - Preparar el Servidor LTSP</title>
+		<para>Para realizar esta practica vamos a usar un SO Ubuntu 12.04 de 32 bits.
+		</para>
+		<para> El primer paso sera modificar el nombre del equipo y el dominio al que lo agregaremos. A partir de ahora pasaran a llamarse "gonzalez" y "machado".
+		</para>
+			<figure id="001">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/SERVIDOR/1.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+		<para>
+		Seguidamente debemos modificar el archivo "/etc/network/interfaces" y añadir la conexion de red interna a partir de la cual se conectaran nuestros clientes.
+		</para>
+			<figure id="002">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/SERVIDOR/2.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+		<para>
+		A continuacion editaremos el archivo "/etc/NetworkManager/NetworkManager.conf" cambiando el valor "false" del apartado "managed" por el valor "true".
+		</para>
+			<figure id="003">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/SERVIDOR/3.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+		<para>
+		Ahora añadiremos nuestro nombre de dominio al archivo "/etc/ltsp/dhcpd.conf". Recordemos que nuestro dominio es "machado".
+		</para>
+			<figure id="004">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/SERVIDOR/4.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+		<para>
+		Como ultimo paso de configuracion debemos agregar nuestra interfaz de red al archivo "/etc/default/isc-dhcp-server". En nuestro caso ha resultado ser la interfaz "eth1".
+		</para>
+			<figure id="005">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/SERVIDOR/5.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+		<para>
+		Ahora solo nos queda instalar "ltsp-server-standalone" y "openssh-server". Una vez hecho esto, debemos generar la imagen del cliente, para ello nos valdremos del comando "ltsp-build-client".
+		</para>
+			<figure id="006">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/SERVIDOR/8.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+		<para>
+		Reiniciamos una serie de servicios...
+		</para>
+			<figure id="007">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/SERVIDOR/6.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+			<figure id="008">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/SERVIDOR/7.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+		<para> Y ya esta, con esto hemos terminado la configuracion de nuestro servidor LTSP.
+	</section>
+	<section>
+	<title>2 - Probar el acceso desde un cliente</title>
+		<para>
+		El primer paso sera crear una maquina cliente sin disco duro, ya que nos conectaremos a traves de la red a nuestro servidor.
+		</para>
+			<figure id="009">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/CLIENTE/0.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+			<figure id="010">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/CLIENTE/1.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+		<para>
+		Con todo esto, ya deberia funcionar nuestro cliente. Lo arrancamos, nos logueamos y ya esta todo listo.
+		</para>
+			<figure id="011">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/CLIENTE/2.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+			<figure id="012">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/CLIENTE/3.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+			<figure id="013">
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="img/CLIENTE/4.png" format="PNG" align="center" scale="50" />
+					</imageobject>
+				</mediaobject>
+			</figure>
+	</section>
+</chapter>
+
